@@ -1,0 +1,117 @@
+    /* FONT IMPORT */
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+    /* RESET */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    img {
+        display: block;
+    }
+
+    /* CUSTOME PROPERTIES */
+
+    :root {
+        /* COLORS */
+        /* primary */
+        --DARK-CYAN: hsl(185, 75%, 39%);
+        --VERY-DARK-DESATURETED-BLUE: hsl(229, 23%, 23%);
+        --DARK-GRAYISH-BLUE: hsl(227, 10%, 46%);
+        /* neutrals */
+        --DARK-GRAY: hsl(0, 0%, 59%);
+
+        /* TYPOGRAPHY */
+        --FS: 18px;
+        --FF: 'Kumbh Sans', sans-serif;
+        --BOLD: 700;
+    }
+
+    /* GENERAL STYLE */
+
+    body {
+        font-family: var(--FF);
+        font-size: 16px;
+
+        /* center card */
+        
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--DARK-CYAN);
+        background-image: url("/images/bg-pattern-top.svg") , url("/images/bg-pattern-bottom.svg");
+        background-position: left -300px, right 550px;
+        background-size: 60% 60%, 60% 60%;
+        background-repeat: no-repeat, no-repeat;
+
+    }
+
+    @media screen and (min-width: 1400px) {
+        body {
+            background-position: left -500px, right 500px;
+            background-size: 50% 100%, 50% 100%;
+        }
+    }
+
+    /* UTILS */
+    .center {
+        text-align: center;
+    }
+
+    .greyout {
+        color: var(--DARK-GRAY);
+    }
+
+    .small-title {
+        font-size: var(--FS);
+        color: var(--VERY-DARK-DESATURETED-BLUE);
+        font-weight: var(--BOLD);
+    }
+
+    .flex-group {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+    .sep {
+        width: 99%;
+        margin: 0 auto;
+        border: none;
+        border-bottom: 1px groove var(--DARK-GRAY);
+    }
+    /* STYLE */
+    .profile-card {
+        width: clamp(350px, 10vw, 375px);
+        height: clamp(380px, 20vw, 430px );
+        background-image: url("/images/bg-pattern-card.svg");
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-color: white;
+    }
+
+    .profile-card__header {
+        height: 67%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .profile-card__img {
+        border-radius: 50%;
+        border: 7px solid white;
+    }
+
+    .profile-card__body {
+        height: 25%;
+    }
